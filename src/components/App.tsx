@@ -40,7 +40,6 @@ const reducer = (todos: Todo[], action: Action) => {
 const App = () => {
   const [todos, dispatch] = useReducer(reducer, []);
   const handleCreateTodo = (value: string) => {
-    console.log(todos);
     dispatch({
       type: "create-to-do",
       id: crypto.randomUUID(),
