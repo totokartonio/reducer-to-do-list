@@ -1,5 +1,5 @@
-import style from "./TodoList.module.css";
 import type { Todo } from "../../types";
+import TodoItem from "../TodoItem";
 
 type Props = {
   todos: Todo[];
@@ -12,11 +12,14 @@ const TodoList = ({ todos, handleToggleTodo, handleDeleteTodo }: Props) => {
     <>
       <ul>
         {todos.map(({ id, value, isCompleted }: Todo) => (
-          <li key={id} className={isCompleted ? style.completed : ""}>
-            {value}
-            <button onClick={() => handleToggleTodo(id)}>Toggle</button>
-            <button onClick={() => handleDeleteTodo(id)}>Delete</button>
-          </li>
+          <TodoItem
+            key={id}
+            id={id}
+            value={value}
+            isCompleted={isCompleted}
+            handleOnToggle={handleToggleTodo}
+            handleOnClick={handleDeleteTodo}
+          />
         ))}
       </ul>
     </>
