@@ -1,5 +1,5 @@
 import XIcon from "../../assets/xicon.svg?react";
-import style from "./TodoItem.module.css";
+import styles from "./TodoItem.module.css";
 
 type Props = {
   id: string;
@@ -17,14 +17,14 @@ const TodoItem = ({
   handleOnClick,
 }: Props) => {
   return (
-    <li>
+    <li className={styles.itemRow}>
       <button
         onClick={() => handleOnToggle(id)}
-        className={`${style.item} ${isCompleted ? style.completed : ""}`}
+        className={`${styles.item} ${isCompleted ? styles.completed : ""}`}
       >
         {value}
       </button>
-      <button onClick={() => handleOnClick(id)} className={style.deleteButton}>
+      <button onClick={() => handleOnClick(id)} className={styles.deleteButton}>
         <XIcon width="1.5rem" height="1.5rem" />
       </button>
     </li>

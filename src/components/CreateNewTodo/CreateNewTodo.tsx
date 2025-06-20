@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./CreateNewTodo.module.css";
 
 const CreateNewTodo = ({
   handleCreateTodo,
@@ -12,9 +13,13 @@ const CreateNewTodo = ({
     setValue("");
   };
   return (
-    <form onSubmit={(event) => onSubmit(event)}>
-      <input value={value} onChange={(event) => setValue(event.target.value)} />
-      <button>Add</button>
+    <form onSubmit={(event) => onSubmit(event)} className={styles.form}>
+      <input
+        value={value}
+        onChange={(event) => setValue(event.target.value)}
+        className={styles.input}
+      />
+      <button className={styles.button}>Add</button>
     </form>
   );
 };

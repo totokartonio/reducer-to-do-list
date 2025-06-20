@@ -1,54 +1,31 @@
-# React + TypeScript + Vite
+# 📝 Todo List — useReducer Practice Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React project built to practice using the `useReducer` hook for state management.
 
-Currently, two official plugins are available:
+## 💡 Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The goal of this project is to:
 
-## Expanding the ESLint configuration
+- Understand how `useReducer` works
+- Manage complex state updates (create, toggle, delete)
+- Use TypeScript with React components
+- Structure a clean UI using CSS Modules
+- Work with SVG icons using SVGR
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Add new todo items
+- Mark items as completed
+- Delete items
+- Nicely styled with CSS Modules
+- SVG icon from [Phosphor Icons](https://phosphoricons.com/)
+- Global CSS reset based on [Josh Comeau’s custom reset](https://www.joshwcomeau.com/css/custom-css-reset/)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Technologies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- React + TypeScript
+- CSS Modules
+- `useReducer` hook
+- Vite
+- Bun (optional)
+- SVGR for icons

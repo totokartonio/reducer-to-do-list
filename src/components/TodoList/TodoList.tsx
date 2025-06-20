@@ -1,5 +1,6 @@
 import type { Todo } from "../../types";
 import TodoItem from "../TodoItem";
+import styles from "./TodoList.module.css";
 
 type Props = {
   todos: Todo[];
@@ -10,7 +11,7 @@ type Props = {
 const TodoList = ({ todos, handleToggleTodo, handleDeleteTodo }: Props) => {
   return (
     <>
-      <ul>
+      <ul className={styles.list}>
         {todos.map(({ id, value, isCompleted }: Todo) => (
           <TodoItem
             key={id}

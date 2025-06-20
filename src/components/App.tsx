@@ -62,7 +62,7 @@ const App = () => {
   };
   return (
     <>
-      <p>Hello World</p>
+      <h1>My Todo List</h1>
       <TodoList
         todos={todos}
         handleToggleTodo={handleToggleTodo}
